@@ -7,7 +7,6 @@
 
 ![example workflow](https://github.com/mawuta-super-hack/yamdb_final/actions/workflows/main.yml/badge.svg)
 
-
 ### Возможности API:
 - Регистрация и токена авторизации (Simple JWT).
 - Получение, создание, обновление, удаление учетных записей.
