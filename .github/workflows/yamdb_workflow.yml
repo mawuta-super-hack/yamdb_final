@@ -61,7 +61,7 @@ jobs:
           script: |
             sudo docker-compose stop
             sudo docker-compose rm web
-            sudo docker pull superprog/api_yamdb:latest 
+            sudo docker pull superprog/new_yamdb:latest 
             rm .env
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} > .env
