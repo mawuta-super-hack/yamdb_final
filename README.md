@@ -31,7 +31,7 @@ cd ./api_yamdb/infra
 
 Запуск docker-compose:
 ```
-docker-compose up
+docker-compose up -d --build
 ```
 
 Выполение миграций:
@@ -53,8 +53,6 @@ docker-compose exec web python manage.py collectstatic --no-input
 ```
 docker-compose exec web python manage.py dumpdata > fixtures.json
 ```
-<br>
-
 
 ### Пример наполения .env-файла:
 
@@ -92,6 +90,45 @@ python manage.py load_csv_data
 - review.csv - файл для заполнения таблицы отзывов к произведениям.
 - comments.csv - файл для заполнения таблицы комментариев к отзывам.
 <br>
+
+### Примеры запросов к API:
+
+- Получение списка всех категорий: <br>
+GET http://localhost/api/v1/categories/
+
+```
+[
+  {
+    "count": 0,
+    "next": "string",
+    "previous": "string",
+    "results": [
+      {
+        "name": "string",
+        "slug": "string"
+      }
+    ]
+  }
+]
+```
+
+- Создание категории (только для администратора): <br>
+POST http://localhost/api/v1/categories/
+```
+{
+  "name": "string",
+  "slug": "string"
+}
+```
+- Удаление категории (только для администратора): <br>
+DELETE http://localhost/api/v1/categories/{slug}/
+
+
+Полный список запросов и эндпоинтов описан в документации ReDoc. Документация доступна после запуска проекта по адресу:
+
+```
+http://84.201.163.132/redoc/
+```
 
 Авторы проекта:
 <br>

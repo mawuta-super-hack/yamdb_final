@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:
-    image: superprog/api_yamdb:latest
+    image: superprog/new_yamdb:latest
     restart: always
     volumes:
       - static_value:/app/static/
