@@ -5,7 +5,7 @@
 Этот репозиторий содержит урезанную версию проекта: в составе готовое API для взаимодействия с проектом.
 <br>
 
-![example workflow](https://github.com/mawuta-super-hack/yamdb_final/actions/workflows/main.yml/badge.svg)
+![workflow](https://github.com/mawuta-super-hack/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?)
 
 ### Возможности API:
 - Регистрация и токена авторизации (Simple JWT).
