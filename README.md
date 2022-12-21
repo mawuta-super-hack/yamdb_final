@@ -22,7 +22,7 @@
 Клонировать репозиторий и перейти в него в командной строке:
 
 ```
-git clone https://github.com/mawuta-super-hack/infra_sp2.git
+git clone https://github.com/mawuta-super-hack/yamdb_final.git
 ```
 
 ```
@@ -34,7 +34,7 @@ cd ./api_yamdb/infra
 docker-compose up -d --build
 ```
 
-Выполение миграций:
+Выполнение миграций:
 ```
 docker-compose exec web python manage.py migrate
 ```
@@ -54,15 +54,17 @@ docker-compose exec web python manage.py collectstatic --no-input
 docker-compose exec web python manage.py dumpdata > fixtures.json
 ```
 
-### Пример наполения .env-файла:
-
+### Пример наполнения .env-файла:
+```
 DB_ENGINE=django.db.backends.postgresql <br>
-DB_NAME=(им базы данных)<br>
+DB_NAME=(имя базы данных)<br>
 POSTGRES_USER=(логин для подключения к БД)<br>
 POSTGRES_PASSWORD=(пароль для подключения к БД)<br>
 DB_HOST=(название сервиса/контейнера)<br>
 DB_PORT=(порт для подключения к БД)<br>
-SECRET_KEY=(автоматически сгенерированное значение переменной при создании проекта django)<br>
+SECRET_KEY=(автоматически сгенерированное значение переменной при создании проекта django)
+```
+<br>
 
 ### Импорт данных из csv для наполнения базы:
 
@@ -125,7 +127,7 @@ DELETE http://localhost/api/v1/categories/{slug}/
 
 
 Полный список запросов и эндпоинтов описан в документации ReDoc.
-Документация доступна после запуска проекта по [адресу](http://84.201.163.132/redoc).
+Документация доступна после запуска проекта по [адресу](http://localhost/redoc).
 
 
 Авторы проекта:
